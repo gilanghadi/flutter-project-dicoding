@@ -90,6 +90,10 @@ class detailcard extends StatelessWidget {
                     ),
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 8, left: 15),
+                  child: favorite(),
+                )
               ],
             ),
             Container(
@@ -142,6 +146,29 @@ class detailcard extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class favorite extends StatefulWidget {
+  const favorite({Key? key}) : super(key: key);
+
+  @override
+  State<favorite> createState() => _favoriteState();
+}
+
+class _favoriteState extends State<favorite> {
+  bool favorite = false;
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      icon: Icon(!favorite ? Icons.favorite : Icons.favorite_border),
+      color: Colors.red,
+      onPressed: () {
+        setState(() {
+          favorite = !favorite;
+        });
+      },
     );
   }
 }
