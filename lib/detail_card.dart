@@ -90,8 +90,8 @@ class detailcard extends StatelessWidget {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 8, left: 15),
+                const Padding(
+                  padding: EdgeInsets.only(top: 8, left: 15),
                   child: favorite(),
                 )
               ],
